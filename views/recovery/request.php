@@ -32,7 +32,9 @@ $this->params['breadcrumbs'][] = $this->title;
                     'id'                     => 'password-recovery-form',
                     'enableAjaxValidation'   => true,
                     'enableClientValidation' => false,
-                ]); ?>
+                ]);
+                echo $form->errorSummary($model);
+                ?>
 
                 <?= $form->field($model, 'email')->textInput(['autofocus' => true]) ?>
 
